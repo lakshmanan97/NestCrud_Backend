@@ -1,3 +1,11 @@
+
+Once you clone and unzip code 
+
+To start our server using following comments
+
+npm install
+npm run start
+
 <!-- NestJS — Create a CRUD API using TypeORM and PostgreSQL -->
 
 <!-- Prerequisites: -->
