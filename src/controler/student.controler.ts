@@ -27,13 +27,15 @@ export class studentController {
     // update student
     @Put(':id')
     async updateStudentById(@Param('id') id: string, @Body() data: UpdateDto ) {
-        return this.appService.updateStudentById(Number(id), data );
+        console.log(id,"id")
+        console.log(data)
+        return this.appService.updateStudentById(parseInt(id), data );
     }
 
     //delete student
     @Delete(':id')
-    async deleteStudent(@Param('id') id: string, @Res() res) {
-        this.appService.deleteStudent(Number(id),res);
+    async deleteStudent(@Param('id') id: string,) {
+        this.appService.deleteStudent(parseInt(id));
     }
 
 }

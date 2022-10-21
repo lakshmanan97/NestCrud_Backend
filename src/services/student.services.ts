@@ -49,13 +49,14 @@ export class studentService {
     }
 
     // delete
-    async deleteStudent(id: number,res) {
-        const deletedData = await this.studentRepository.delete(id);
-        if(deletedData.affected){
-            return res.status(200).send(`the id ${id} has been deleted`);
-        }
-        if (!deletedData.affected) {
-           return res.status(HttpStatus.NOT_FOUND).send(`student not found in this id ${id}`);
-        }
+    async deleteStudent(id: number,) {
+        return await this.studentRepository.delete(id);
+
+        // if(deletedData.affected){
+        //     return res.status(200).send(`the id ${id} has been deleted`);
+        // }
+        // if (!deletedData.affected) {
+        //    return res.status(HttpStatus.NOT_FOUND).send(`student not found in this id ${id}`);
+        // }
     }
 }
